@@ -1,0 +1,13 @@
+<form enctype="multipart/form-data" action="/upload_csv/" method="post">
+    {% csrf_token %} 
+    <input type="file"  name="csv_file"/> 
+    <input type="submit" value="Submit" />
+    {% csrf_token %}
+</form>
+<div>
+    {% include "messages.html"%}
+    {%block content%} {%endblock content%}
+    
+    </div>
+
+
